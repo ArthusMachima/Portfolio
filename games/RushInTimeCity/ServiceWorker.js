@@ -1,9 +1,9 @@
 const cacheName = "DeuxExMachima-Rush in Time City-0.1";
 const contentToCache = [
     "Build/RushInTimeCity.loader.js",
-    "Build/RushInTimeCity.framework.js",
-    "Build/RushInTimeCity.data",
-    "Build/RushInTimeCity.wasm",
+    "Build/RushInTimeCity.framework.js.gz",
+    "Build/RushInTimeCity.data.gz",
+    "Build/RushInTimeCity.wasm.gz",
     "TemplateData/style.css"
 
 ];

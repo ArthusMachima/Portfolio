@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Arthus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Playfair+Display:wght@700;900&family=Space+Mono:wght@400;700&family=Actor&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body >
+
+<!-- Header -->
+<header class="header">
+    <nav class="header-left">
+        <a class="arthus title" href="#hero"><h1>Arthus Machima</h1></a>
+    </nav>
+    <div class="header-right">
+        <a class="shortcut" href="#about">ABOUT</a>
+        <a class="shortcut" href="#works">WORKS</a>
+        <a class="shortcut" href="#certificates">CERTIFICATES</a>
+        <a class="shortcut" href="#socials">SOCIALS</a>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+    <div class="hero-blob"></div>
+    <div class="hero-content">
+        <h1 class="arthus hero-name">Arthus Machima</h1>
+        <div class="role-heading">
+            <div class="hero-underline"> </div>
+            <p class="role-line">Game Developer and Multimedia Artist</p>
+            <div class="hero-underline"> </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="about-blob"></div>
+    <div class="container">
+        <div class="about-content">
+            <img class="about-pfp" src="pfp.png" alt="PFP">
+            <div>
+                <h2 class="about-split-heading">ABOUT <span class="k-gold">ME</span></h2>
+                <div class="heading-underline-left"></div>
+                <p class="about-text">
+                    Hello there! I'm Arthus. I'm a person who from time to time, likes to make games, music, and art. This website stores some of the stuff I made throughout the years, from which you can check them out to see what impresses you or point out what is there to improve.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Works -->
+<section class="works" id="works">
+    <div class="works-blob"></div>
+    <div class="container">
+        <div class="center-heading-wrap">
+            <span class="center-rule left"></span>
+            <h2 class="split-heading"><span class="k-dark">WOR</span><span class="k-gold">KS</span></h2>
+            <span class="center-rule right"></span>
+        </div>
+        <div class="work-groups">
+
+            <!-- GAMES -->
+            <div class="work-group">
+
+
+                <h3>Games</h3>
+                <!-- LIST -->
+                <div class="card-grid">
+
+                    <!-- PAWNTURN CRISIS -->
+                    <a data-panel="game-1">
+                        <div class="placeholder-card">
+                            <div><img class="thumb-game" src="games/PTC/ptc_1.png" alt="PTC thumb"></div>
+                            <div class="placeholder-info">
+                                <span class="p-title">Pawn Turn Crisis</span>
+                                <span class="p-desc">Turn based x Shooter Game</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- FATHER'S MANSION -->
+                    <a data-panel="game-2">
+                        <div class="placeholder-card">
+                            <div><img class="thumb-game" src="games/FathersMansion/fathersmansion-6.png" alt="FathersMansion thumb"></div>
+                            <div class="placeholder-info">
+                                <span class="p-title">Father's Mansion</span>
+                                <span class="p-desc">Narrative Puzzle Escape Game</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- RUSH IN TIME CITY -->
+                    <a data-panel="game-3">
+                        <div class="placeholder-card">
+                            <div><img class="thumb-game" src="games/RushInTimeCity/timecity-2.png" alt="RushInTimeCity thumb"></div>
+                            <div class="placeholder-info">
+                                <span class="p-title">Rush in Time City</span>
+                                <span class="p-desc">Fast-Paced Platformer Game</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- DE:BUG -->
+                    <a data-panel="game-4">
+                        <div class="placeholder-card">
+                            <div><img class="thumb-game" src="games/DebugShooter/debug-1.png" alt="DE:BUG thumb"></div>
+                            <div class="placeholder-info">
+                                <span class="p-title">DE:BUG</span>
+                                <span class="p-desc">Inventory Survival Shooter Game</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <a class="show-more" href="pages/works-games.html">Show more</a>
+
+                <!-- Sliding panels for the game cards above (one per card, hooked by data-panel) -->
+
+                <!-- PawnTurn Crisis -->
+                <div class="backdrop" id="panelBackdrop_game-1"></div>
+                <div class="panel" id="infoPanel_game-1">
+                    <div><img class="panel-header-square" src="games/PTC/ptc_1.png" alt="Pawn Turn Crisis" id="mainHeaderImage_game-1"></div>
+                    <div class="panel-content">
+                        <div class="image-gallery">
+                            <img src="games/PTC/ptc_1.png" alt="Pawn Turn Crisis screenshot 1" class="galleryImage">
+                            <img src="games/PTC/ptc_2.png" alt="Pawn Turn Crisis screenshot 2" class="galleryImage">
+                            <img src="games/PTC/ptc_3.png" alt="Pawn Turn Crisis screenshot 2" class="galleryImage">
+                        </div>
+                        <h1 class="panel-title">Pawn Turn Crisis</h1>
+                        <p class="panel-description">
+                            A turn-based combat x shooter game where the player needs to strategize how to survive while fending off from instrusive chess pieces and more. I made this game for my school organization's little gamejam.
+                        </p>
+                        <a class="button" href="games/PTC/game-player.html">Play Game</a>
+                        <div style="margin-bottom: 99px"></div>
+                    </div>
+                </div>
+
+                <!-- Father's Mansion -->
+                <div class="backdrop" id="panelBackdrop_game-2"></div>
+                <div class="panel" id="infoPanel_game-2">
+                    <div><img class="panel-header-square" src="games/FathersMansion/fathersmansion-6.png" alt="Father's Mansion" id="mainHeaderImage_game-2"></div>
+                    <div class="panel-content">
+                        <div class="image-gallery">
+                            <img src="games/FathersMansion/fathersmansion-1.png" alt="Father's Mansion screenshot 1" class="galleryImage">
+                            <img src="games/FathersMansion/fathersmansion-2.png" alt="Father's Mansion screenshot 2" class="galleryImage">
+                            <img src="games/FathersMansion/fathersmansion-3.png" alt="Father's Mansion screenshot 3" class="galleryImage">
+                            <img src="games/FathersMansion/fathersmansion-4.png" alt="Father's Mansion screenshot 4" class="galleryImage">
+                            <img src="games/FathersMansion/fathersmansion-5.png" alt="Father's Mansion screenshot 5" class="galleryImage">
+                            <img src="games/FathersMansion/fathersmansion-6.png" alt="Father's Mansion screenshot 6" class="galleryImage">
+                            <img src="games/FathersMansion/fathersmansion-7.png" alt="Father's Mansion screenshot 7" class="galleryImage">
+                            <img src="games/FathersMansion/fathersmansion-8.png" alt="Father's Mansion screenshot 8" class="galleryImage">
+                        </div>
+                        <h1 class="panel-title">Father's Mansion</h1>
+                        <p class="panel-description">
+                            Father's Mansion is a puzzle escape game with a narrative being told in a perspective of a blue-haired girl with a rugged brown jacket who seems to not have an idea why they ended up there. Collect items and clues scattered throughout a mysterious mansion and the blue-haired girl may find a way to escape. This game was made for a group project in one of my majors.
+                        </p>
+                        <a class="button" href="games/FathersMansion/game-player.html">Play Game</a>
+                        <div style="margin-bottom: 99px"></div>
+                    </div>
+                </div>
+
+                <!-- Rush in Time City -->
+                <div class="backdrop" id="panelBackdrop_game-3"></div>
+                <div class="panel" id="infoPanel_game-3">
+                    <div><img class="panel-header-square" src="games/RushInTimeCity/timecity-2.png" alt="Rush in Time City" id="mainHeaderImage_game-3"></div>
+                    <div class="panel-content">
+                        <div class="image-gallery">
+                            <img src="games/RushInTimeCity/timecity-1.png" alt="Rush in time city screenshot 1" class="galleryImage">
+                            <img src="games/RushInTimeCity/timecity-2.png" alt="Rush in time city screenshot 2" class="galleryImage">
+                            <img src="games/RushInTimeCity/timecity-3.png" alt="Rush in time city screenshot 3" class="galleryImage">
+                            <img src="games/RushInTimeCity/timecity-4.png" alt="Rush in time city screenshot 4" class="galleryImage">
+                        </div>
+                        <h1 class="panel-title">Rush in Time City (Prototype)</h1>
+                        <p class="panel-description">
+                            A prototype of a platformer game where you rush through the corridors dodging and parrying enemy bullets as you reach the end of the corridors to stop a catastrophe on a time limit. The game was made in two days as an activity for a major subject.
+                        </p>
+                        <a class="button" href="games/RushInTimeCity/game-player.html">Play Game</a>
+                        <div style="margin-bottom: 99px"></div>
+                    </div>
+                </div>
+
+                <!-- De:Bug -->
+                <div class="backdrop" id="panelBackdrop_game-4"></div>
+                <div class="panel" id="infoPanel_game-4">
+                    <div><img class="panel-header-square" src="games/DebugShooter/debug-1.png" alt="DE:BUG" id="mainHeaderImage_game-4"></div>
+                    <div class="panel-content">
+                        <div class="image-gallery">
+                            <img src="games/DebugShooter/debug-1.png" alt="De:Bug screenshot 1" class="galleryImage">
+                            <img src="games/DebugShooter/debug-2.png" alt="De:Bug screenshot 2" class="galleryImage">
+                            <img src="games/DebugShooter/debug-3.png" alt="De:Bug screenshot 3" class="galleryImage">
+                            <img src="games/DebugShooter/debug-4.png" alt="De:Bug screenshot 4" class="galleryImage">
+                        </div>
+                        <h1 class="panel-title">DE:BUG</h1>
+                        <p class="panel-description">
+                            DE:BUG is a game about shooting literal bugs. The game was my first attempt on implementing proceedural map generation and inventory system.
+                        </p>
+                        <a class="button" href="games/DebugShooter/game-player.html">Play Game</a>
+                        <div style="margin-bottom: 99px"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- MODELS -->
+            <div class="work-group">
+                <h3>Models</h3>
+                <div class="card-grid">
+                    
+                    <!-- Turret Towerbot --->
+                    <div class="placeholder-card">
+                        <iframe src="models/Turret Robot/index.html" class="model-display"></iframe>
+                        <div class="placeholder-info">
+                            <span class="p-title">Turret Towerbot</span>
+                            <!-- <span class="p-desc">New project in the works</span> -->
+                        </div>
+                    </div>
+
+                    <!-- Shotgun Towerbot --->
+                    <div class="placeholder-card">
+                        <iframe src="models/Shotgun Robot/index.html" class="model-display"></iframe>
+                        <div class="placeholder-info">
+                            <span class="p-title">Shotgun Towerbot</span>
+                            <!-- <span class="p-desc">New project in the works</span> -->
+                        </div>
+                    </div>
+
+                    <!-- Barret Towerbot --->
+                    <div class="placeholder-card">
+                        <iframe src="models/Barret Robot/index.html" class="model-display"></iframe>
+                        <div class="placeholder-info">
+                            <span class="p-title">Barret Towerbot</span>
+                            <!-- <span class="p-desc">New project in the works</span> -->
+                        </div>
+                    </div>
+                    
+                </div>
+                <a class="show-more" href="pages/works-models.html">Show more</a>
+            </div>
+
+            <!-- MUSIC -->
+            <div class="work-group">
+                <h3>Music</h3>
+                <div class="music-list">
+                    <div class="mini-player" data-src="https://files.catbox.moe/gsrb7z.mp3" data-artist="Arthus4" data-title="Colors (ft. grxndusk)"></div>
+                    <div class="mini-player" data-src="https://files.catbox.moe/vl4shp.mp3" data-artist="Arthus4" data-title="Machina"></div>
+                    <div class="mini-player" data-src="https://files.catbox.moe/astmt8.mp3" data-artist="Arthus4" data-title="Chromatic Rose"></div>
+                    <div class="mini-player" data-src="https://files.catbox.moe/2nbkzh.mp3" data-artist="Arthus4" data-title="to whom, who yearned"></div>
+                </div >
+                <a class="show-more" href="pages/works-music.html">Show more</a>
+            </div>
+
+            <!-- ARTS -->
+            <div class="work-group">
+
+                <h3>Art</h3>
+                <div class="card-grid art-grid">
+
+                    <img class="art-image" src="https://files.catbox.moe/uafypl.png" alt="Antagonist UI Art" id="mainHeaderImage_art-antagonist">
+                    <img class="art-image" src="https://files.catbox.moe/m8d25x.png" alt="Protagonist UI Art" id="mainHeaderImage_art-protagonist">
+                    <img class="art-image" src="https://files.catbox.moe/zsxpa2.png" alt="Antagonist Character Sheet" id="mainHeaderImage_art-raven">
+                    <img class="art-image" src="https://files.catbox.moe/qc6pgg.png" alt="Protagonist Character Sheet" id="mainHeaderImage_art-jon">
+
+                </div>
+                <a class="show-more" href="pages/works-arts.html">Show more</a>
+
+                <!-- 1. ANTAGONIST UI PANEL -->
+                <div class="panel" id="infoPanel_art-antagonist"> </div>
+
+                <!-- 2. PROTAGONIST UI PANEL -->
+                <div class="panel" id="infoPanel_art-protagonist"> </div>
+
+                <!-- 3. RAVEN PANEL -->
+                <div class="panel" id="infoPanel_art-raven">  </div>
+
+                <!-- 4. JON PANEL -->
+                <div class="panel" id="infoPanel_art-jon">  </div>
+
+            </div >
+
+
+        </div>
+    </div>
+</section>
+
+<!-- Certificates -->
+<section class="cert" id="certificates">
+    <div class="container">
+        <div class="center-heading-wrap">
+            <span class="center-rule left"></span>
+            <h2 class="split-heading"><span class="k-dark">CERTIFICA</span><span class="k-gold">TES</span></h2>
+            <span class="center-rule right"></span>
+        </div>
+
+        <div class="cert-grid">
+            <div class="placeholder-card">
+                <div class="placeholder-thumb"></div>
+                <div class="placeholder-info">
+                    <span class="p-title">Insert Certificate Here</span>
+                    <span class="p-desc">Certificate Name &middot; Year</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="placeholder-thumb"></div>
+                <div class="placeholder-info">
+                    <span class="p-title">Insert Certificate Here</span>
+                    <span class="p-desc">Certificate Name &middot; Year</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="placeholder-thumb"></div>
+                <div class="placeholder-info">
+                    <span class="p-title">Insert Certificate Here</span>
+                    <span class="p-desc">Certificate Name &middot; Year</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Socials -->
+<section class="socials-section" id="socials">
+    <div class="container" style="padding: 30px 0;">
+        <div class="center-heading-wrap">
+            <span class="center-rule left"></span>
+            <h2 class="split-heading"><span class="k-dark">SOCI</span><span class="k-gold">ALS</span></h2>
+            <span class="center-rule right"></span>
+        </div>
+        <div class="socials">
+
+            <div>
+                <a href="https://github.com/ArthusMachima"><img src="socials/github.png" class="social-icon" alt="social icon"></a>
+                <p class="social-link-text">GitHub</p>
+            </div>
+            <div>
+                <a href="https://soundcloud.com/arthur2s"><img src="socials/soundcloud.png" class="social-icon" alt="social icon"></a>
+                <p class="social-link-text">SoundCloud</p>
+            </div>
+            <div>
+                <a href="https://www.tiktok.com/@arthustheacapellanapper"><img src="socials/tiktok.png" class="social-icon" alt="social icon"></a>
+                <p class="social-link-text">TikTok</p>
+            </div>
+            <div>
+                <a href="https://x.com/arthusmachima"><img src="socials/twitter.png" class="social-icon" alt="social icon"></a>
+                <p class="social-link-text">Twitter</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/@arthusamogus"><img src="socials/yt.png" class="social-icon" alt="social icon"></a>
+                <p class="social-link-text">YouTube</p>
+            </div>
+            <div>
+                <a href="https://arthusmachouism.itch.io/"><img src="socials/itch.png" class="social-icon" alt="social icon"></a>
+                <p class="social-link-text">Itch</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comments -->
+<!--
+<section class="comments" id="comments">
+    <div class="container">
+        <h1>Comments</h1>
+        <div class="comment-feed">
+            <div class="comment-row">
+                <div class="comment-avatar"></div>
+                <div class="comment-body">
+                    <span class="comment-author">GamerGuy88</span>
+                    <p class="comment-text">"The Nova RPG is incredible! The art style alone is worth the download."</p>
+                </div>
+            </div>
+            <div class="comment-row">
+                <div class="comment-avatar"></div>
+                <div class="comment-body">
+                    <span class="comment-author">SynthWanderer</span>
+                    <p class="comment-text">"Love the ambient tracks. Perfect for late-night coding sessions."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<footer class="site-footer">
+    &copy; 2026 Arthus Machima. All rights reserved.
+    <p>You can contact me in this email: <u><a href="mailto:arthusmachima@proton.me">arthusmachima@proton.me</a></u></p>
+</footer>
+
+<!-- Fullscreen image viewer (shared by all sliding panels) -->
+<div id="fullscreenModal">
+    <img id="modalImage" src="" alt="Fullscreen View">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

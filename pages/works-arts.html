@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Arthus</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Playfair+Display:wght@700;900&family=Space+Mono:wght@400;700&family=Actor&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- --- CSS Variables for easy customization (from panelTest) --- -->
+</head>
+<body >
+
+<!-- Header -->
+<header class="header">
+    <nav class="header-left">
+        <a class="arthus title" href="../index.html#hero"><h1>Arthus Machima</h1></a>
+    </nav>
+    <div class="header-right">
+        <a class="shortcut" href="../index.html#about">ABOUT</a>
+        <a class="shortcut" href="../index.html#works">WORKS</a>
+        <a class="shortcut" href="../index.html#certificates">CERTIFICATES</a>
+        <a class="shortcut" href="../index.html#socials">SOCIALS</a>
+    </div>
+</header>
+
+<!-- Works -->
+<section class="works" id="works">
+    <div class="works-blob"></div>
+    <div class="container">
+        <div class="center-heading-wrap">
+            <span class="center-rule left"></span>
+            <h2 class="split-heading"><span class="k-dark">AR</span><span class="k-gold">TS</span></h2>
+            <span class="center-rule right"></span>
+        </div>
+        <div class="work-groups">
+
+            <!-- ARTS -->
+            <div class="work-group">
+                <div class="card-grid">
+                    
+                    <img class="art-image" src="https://files.catbox.moe/zsxpa2.png" alt="Antagonist Artwork" id="mainHeaderImage_art-antagonist">
+                    <img class="art-image" src="https://files.catbox.moe/uafypl.png" alt="Antagonist UI Art" id="mainHeaderImage_art-antagonist-ui">
+                    <img class="art-image" src="https://files.catbox.moe/qc6pgg.png" alt="Protagonist Artwork" id="mainHeaderImage_art-protagonist">
+                    <img class="art-image" src="https://files.catbox.moe/m8d25x.png" alt="Protagonist UI Art" id="mainHeaderImage_art-protagonist-ui">
+
+                </div >
+            </div>
+            
+            <div class="work-group">
+                <div class="card-grid">
+                    
+                    <img class="art-image" src="https://files.catbox.moe/p9meag.png" alt="Jon Artwork" id="mainHeaderImage_art-jon">
+                    <img class="art-image" src="https://files.catbox.moe/o8zvcd.png" alt="Props Artwork" id="mainHeaderImage_art-props">
+                    <img class="art-image" src="https://files.catbox.moe/iuhu7g.png" alt="Raven Artwork" id="mainHeaderImage_art-raven">
+
+                </div >
+            </div>
+            
+            <!-- 1. ANTAGONIST UI PANEL -->
+            <div class="backdrop" id="panelBackdrop_art-antagonist"></div>
+            <div class="panel" id="infoPanel_art-antagonist"></div>
+
+            <!-- 2. PROTAGONIST UI PANEL -->
+            <div class="backdrop" id="panelBackdrop_art-protagonist"></div>
+            <div class="panel" id="infoPanel_art-protagonist"></div>
+
+            <!-- 3. ANTAGONIST UI (Specific) PANEL -->
+            <div class="backdrop" id="panelBackdrop_art-antagonist-ui"></div>
+            <div class="panel" id="infoPanel_art-antagonist-ui"></div>
+
+            <!-- 4. PROTAGONIST UI (Specific) PANEL -->
+            <div class="backdrop" id="panelBackdrop_art-protagonist-ui"></div>
+            <div class="panel" id="infoPanel_art-protagonist-ui"></div>
+
+            <!-- 5. JON PANEL -->
+            <div class="backdrop" id="panelBackdrop_art-jon"></div>
+            <div class="panel" id="infoPanel_art-jon"></div>
+
+            <!-- 6. PROPS PANEL -->
+            <div class="backdrop" id="panelBackdrop_art-props"></div>
+            <div class="panel" id="infoPanel_art-props"></div>
+
+            <!-- 7. RAVEN PANEL -->
+            <div class="backdrop" id="panelBackdrop_art-raven"></div>
+            <div class="panel" id="infoPanel_art-raven"></div>
+
+        </div>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    &copy; 2026 Arthus Machima. All rights reserved.
+</footer>
+
+<!-- Fullscreen image viewer (shared by all sliding panels) -->
+<div id="fullscreenModal">
+    <img id="modalImage" src="" alt="Fullscreen View">
+</div>
+
+<script src="../script.js"></script>
+<script>
+    // Sliding panel + fullscreen viewer logic, ported from panelTest.html.
+    //
+    // Instead of dedicated buttons, ANY element carrying a data-panel="<id>"
+    // attribute becomes a trigger that opens the panel/backdrop pair with the
+    // matching id suffix (infoPanel_<id> / panelBackdrop_<id>). Right now that's
+    // wired up on the 4 cards inside the Games card-grid, but adding
+    // data-panel="something" to a Models/Music/Art card later (plus its own
+    // panel + backdrop markup) is all it takes to hook those up too.
+    document.addEventListener('DOMContentLoaded', () => {
+        const fullscreenModal = document.getElementById('fullscreenModal');
+        const modalImage = document.getElementById('modalImage');
+        const body = document.body;
+
+        let activePanelId = null;
+
+        function openPanel(id) {
+            const panel = document.getElementById(`infoPanel_${id}`);
+            const backdrop = document.getElementById(`panelBackdrop_${id}`);
+            if (!panel || !backdrop) return;
+
+            panel.classList.add('active');
+            backdrop.classList.add('active');
+            body.style.overflow = 'hidden';
+            activePanelId = id;
+        }
+
+        function closePanel(id) {
+            const panel = document.getElementById(`infoPanel_${id}`);
+            const backdrop = document.getElementById(`panelBackdrop_${id}`);
+            if (!panel || !backdrop) return;
+
+            panel.classList.remove('active');
+            backdrop.classList.remove('active');
+            body.style.overflow = 'auto';
+            if (activePanelId === id) activePanelId = null;
+        }
+
+        function closeActivePanel() {
+            if (activePanelId) closePanel(activePanelId);
+        }
+
+        function switchHeaderImage(imgEl, panelId) {
+            const header = document.getElementById(`mainHeaderImage_${panelId}`);
+            if (!header) return;
+            header.src = imgEl.src;
+            header.alt = imgEl.alt;
+        }
+
+        function showFullscreen(panelId) {
+            const header = document.getElementById(`mainHeaderImage_${panelId}`);
+            if (!header) return;
+            modalImage.src = header.src;
+            modalImage.alt = `${header.alt} (Fullscreen)`;
+            fullscreenModal.classList.add('active');
+        }
+
+        function hideFullscreen() {
+            fullscreenModal.classList.remove('active');
+        }
+
+        // 1. Any [data-panel] element opens its matching panel on click.
+        document.querySelectorAll('[data-panel]').forEach(trigger => {
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault(); // stops <a> cards (like Pawn Turn Crisis) from navigating away
+                openPanel(trigger.dataset.panel);
+            });
+        });
+
+        // 2. Clicking a backdrop closes its own panel.
+        document.querySelectorAll('.backdrop').forEach(backdrop => {
+            backdrop.addEventListener('click', () => {
+                const id = backdrop.id.replace('panelBackdrop_', '');
+                closePanel(id);
+            });
+        });
+
+        // 3. Inside each panel: gallery clicks swap the header image, and
+        //    clicking the header image opens the fullscreen viewer.
+        document.querySelectorAll('.panel').forEach(panel => {
+            const id = panel.id.replace('infoPanel_', '');
+
+            panel.querySelectorAll('.galleryImage').forEach(img => {
+                img.addEventListener('click', () => switchHeaderImage(img, id));
+            });
+
+            const header = document.getElementById(`mainHeaderImage_${id}`);
+            if (header) header.addEventListener('click', () => showFullscreen(id));
+        });
+
+        // 4. Escape closes the fullscreen viewer first, then the open panel.
+        document.addEventListener('keydown', (event) => {
+            if (event.key !== 'Escape') return;
+
+            if (fullscreenModal.classList.contains('active')) {
+                hideFullscreen();
+            } else {
+                closeActivePanel();
+            }
+        });
+
+        // 5. Clicking outside the image inside the fullscreen viewer closes it.
+        fullscreenModal.addEventListener('click', (event) => {
+            if (event.target === fullscreenModal) hideFullscreen();
+        });
+    });
+</script>
+</body>
+</html>

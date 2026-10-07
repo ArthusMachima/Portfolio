@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "284983611164",
+    "firebase_url": "https://machima-2d8a4-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "machima-2d8a4",
+    "storage_bucket": "machima-2d8a4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284983611164:android:0707d66b44b1f69f2c74d9",
+        "android_client_info": {
+          "package_name": "com.arthus.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwjV9SJkcnuUdmecSsU-Nkba1fR0ZHbZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284983611164:android:478606faeb55bb592c74d9",
+        "android_client_info": {
+          "package_name": "com.bsemc.gd5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwjV9SJkcnuUdmecSsU-Nkba1fR0ZHbZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

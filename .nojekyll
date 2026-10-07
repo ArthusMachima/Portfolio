@@ -1,4 +1,4 @@
-cd portfolio-modern
+cd Portfolio
 touch .nojekyll
 git add .nojekyll
 git commit -m "Add .nojekyll to disable Jekyll processing"

@@ -1,0 +1,4 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+C:/Users/Arthus[[:space:]]Machima/Desktop/GD10/Portfolio/games/PTC/Build/PTC.data filter=lfs diff=lfs merge=lfs -text
+*.data filter=lfs diff=lfs merge=lfs -text
